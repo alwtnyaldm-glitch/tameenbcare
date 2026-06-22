@@ -307,6 +307,68 @@
     #start-date{
       width: 94%;
     }
+    /* 1. جعل حاوية الفورم تستخدم Flexbox لتوسيط كل العناصر بداخلها */
+.form-wrapper {
+  width: min(100% - 18px, 420px);
+  margin: 90px auto 24px;
+  background: var(--surface);
+  border-radius: 18px;
+  box-shadow: 0 12px 26px rgba(10, 41, 82, 0.14);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* توسيط العناصر أفقياً */
+}
+
+/* 2. جعل العنوان في المنتصف */
+.form-header {
+  width: 100%;
+  text-align: center;
+  padding: 14px 14px 8px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* 3. جعل جسم الفورم يأخذ كامل العرض ويوسع كل العناصر */
+.form-body {
+  width: 90%; /* عرض محتويات الفورم */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 4. الحقول تأخذ كامل عرض الـ form-body وتتوسط */
+select,
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+  width: 100%; 
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-align: center; /* النص داخل الحقل في المنتصف */
+  direction: rtl; /* الحفاظ على الكتابة بالعربية */
+}
+
+/* 5. توسيط التسميات (Labels) */
+label {
+  width: 100%;
+  text-align: center;
+  margin: 6px 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* 6. توسيط مجموعة الراديو */
+.radio-group-modern {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
   </style>
 </head>
 <body>
